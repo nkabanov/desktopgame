@@ -73,7 +73,7 @@ class TranslatorGame(QMainWindow):
         self.ui.reset_stats.clicked.connect(self.reset_stats)
 
         self.ui.lineEdit_2.textChanged.connect(self.update_search_results)
-        self.ui.listWidget.itemClicked.connect(self.show_word_info)
+        self.ui.listWidget.itemClicked.connect(self.user_search_info)
 
     def gamemodes(self):
         self.user_data = {
@@ -212,6 +212,14 @@ class TranslatorGame(QMainWindow):
     def update_word_list(self, filtered_words):
         self.ui.listWidget.clear()
         self.ui.listWidget.addItems(filtered_words)
+
+    def user_search_info(self, item):
+        word = item.text()
+        info = Dictionary(word)
+        self.ui.lineEdit_2.clear()
+        self.ui.label_68.setText(info)
+        self.ui.stackedWidget.setCurrentWidget(self.ui.user_search_result)
+
 
     def show_abbreviation_list(self):
         self.ui.label_16.setText(f"Список сокращений\n\n{spisok_sokratschenij}")

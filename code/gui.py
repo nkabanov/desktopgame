@@ -1229,6 +1229,7 @@ class Ui_MainWindow(object):
 "background-color: rgb(208, 233, 244);\n"
 "")
         self.label_68.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_68.setWordWrap(True)
 
         self.verticalLayout_36.addWidget(self.label_68)
 
@@ -1374,7 +1375,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 1653, 6448))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 1499, 6448))
         sizePolicy.setHeightForWidth(self.scrollAreaWidgetContents_2.sizePolicy().hasHeightForWidth())
         self.scrollAreaWidgetContents_2.setSizePolicy(sizePolicy)
         self.scrollAreaWidgetContents_2.setStyleSheet(u"background-color: rgb(208, 233, 244);\n"
@@ -2663,7 +2664,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(7)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)

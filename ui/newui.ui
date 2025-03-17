@@ -47,7 +47,7 @@ font-family: Comfortaa
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>7</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="main_menu">
        <property name="sizePolicy">
@@ -1747,6 +1747,9 @@ background-color: rgb(208, 233, 244);
                 <property name="alignment">
                  <set>Qt::AlignmentFlag::AlignCenter</set>
                 </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
                </widget>
               </item>
               <item>
@@ -1932,7 +1935,7 @@ QScrollBar::sub-page:vertical {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>1653</width>
+                 <width>1499</width>
                  <height>6448</height>
                 </rect>
                </property>
