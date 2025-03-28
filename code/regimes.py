@@ -1,6 +1,6 @@
 import pandas
 
-table = pandas.read_csv("../data/slovar.csv")
+table = pandas.read_csv("data/slovar.csv")
 spisok = [words for words in table["Слово"]]
 sinonimi = []
 
