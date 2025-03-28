@@ -8,7 +8,7 @@ from regimes import spisok, Znachenie, Synonyms, Usage, Poisk_po_bukvam, Diction
 from spisok_sokratscheniy import spisok_sokratschenij
 import sqlite3
 
-conn = sqlite3.connect("data/feedback.db", check_same_thread=False)
+conn = sqlite3.connect("../data/feedback.db", check_same_thread=False)
 cursor = conn.cursor()
 conn.commit()
 class TranslatorGame(QMainWindow):

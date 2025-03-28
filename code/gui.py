@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setWindowModality(Qt.WindowModality.NonModal)
-        MainWindow.resize(1569, 640)
+        MainWindow.resize(1378, 1080)
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -69,7 +69,7 @@ class Ui_MainWindow(object):
         self.label_8.setFont(font)
         self.label_8.setStyleSheet(u"color: black;\n"
 "font-weight: bold;\n"
-"font-size: 40px;\n"
+"font-size: 30px;\n"
 "border: 2px solid black;\n"
 "border-radius: 7px;\n"
 "qproperty-alignment: 'AlignCenter';\n"
@@ -1452,7 +1452,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 1499, 6448))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 1850, 6448))
         sizePolicy.setHeightForWidth(self.scrollAreaWidgetContents_2.sizePolicy().hasHeightForWidth())
         self.scrollAreaWidgetContents_2.setSizePolicy(sizePolicy)
         self.scrollAreaWidgetContents_2.setStyleSheet(u"background-color: rgb(208, 233, 244);\n"
