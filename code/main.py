@@ -360,6 +360,6 @@ class TranslatorGame(QMainWindow):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = TranslatorGame()
-    window.resize(1600, 900)
+    window.resize(860, 640)
     window.show()
     sys.exit(app.exec())
