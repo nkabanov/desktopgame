@@ -25,6 +25,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
+        MainWindow.setWindowModality(Qt.WindowModality.NonModal)
         MainWindow.resize(1569, 640)
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -40,8 +41,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
         self.centralwidget.setSizePolicy(sizePolicy)
         self.centralwidget.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-        self.horizontalLayout_9 = QHBoxLayout(self.centralwidget)
-        self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
+        self.verticalLayout_22 = QVBoxLayout(self.centralwidget)
+        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
         self.stackedWidget = QStackedWidget(self.centralwidget)
         self.stackedWidget.setObjectName(u"stackedWidget")
         sizePolicy.setHeightForWidth(self.stackedWidget.sizePolicy().hasHeightForWidth())
@@ -1214,24 +1215,100 @@ class Ui_MainWindow(object):
         self.verticalLayout_37.addLayout(self.horizontalLayout_14)
 
         self.verticalLayout_36 = QVBoxLayout()
-        self.verticalLayout_36.setSpacing(100)
+        self.verticalLayout_36.setSpacing(25)
         self.verticalLayout_36.setObjectName(u"verticalLayout_36")
-        self.label_68 = QLabel(self.user_search_result)
+        self.verticalLayout_36.setContentsMargins(-1, 0, -1, -1)
+        self.scrollArea_2 = QScrollArea(self.user_search_result)
+        self.scrollArea_2.setObjectName(u"scrollArea_2")
+        self.scrollArea_2.setStyleSheet(u"QScrollArea {\n"
+"    background-color: rgb(208, 233, 244);\n"
+"    border: 2px solid black;\n"
+"	border-radius: 7px;\n"
+"	padding: 3px\n"
+"}\n"
+"\n"
+"QScrollBar:vertical, QScrollBar:horizontal {\n"
+"	background-color: white;\n"
+"    width: 20px;\n"
+"    margin: 0px;\n"
+"    border: 2px transparent;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollArea::viewport {\n"
+"    padding: 0px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical, QScrollBar::handle:horizontal {\n"
+"		border: 2px solid black;\n"
+"   		border-radius: 0px;\n"
+"		background-color: #5a8bb8;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover, QScrollBar::handle:horizontal:hover {\n"
+"    background-color: #4a7397;\n"
+"}\n"
+"QScrollBar::add-line:vertical,\n"
+"QScrollBar::sub-line:vertical {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:vertical,\n"
+"QScrollBar::sub-page:vertical {\n"
+"    background: lightblue;\n"
+"	border:2px solid skyblue;\n"
+"	border-radius:0px;\n"
+"}\n"
+"\n"
+"")
+        self.scrollArea_2.setWidgetResizable(True)
+        self.scrollAreaWidgetContents = QWidget()
+        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1517, 405))
+        sizePolicy.setHeightForWidth(self.scrollAreaWidgetContents.sizePolicy().hasHeightForWidth())
+        self.scrollAreaWidgetContents.setSizePolicy(sizePolicy)
+        self.scrollAreaWidgetContents.setStyleSheet(u"background-color: rgb(208, 233, 244);\n"
+"border: none;\n"
+"margin: 0px;")
+        self.horizontalLayout_9 = QHBoxLayout(self.scrollAreaWidgetContents)
+        self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
+        self.horizontalLayout_9.setContentsMargins(-1, 0, -1, -1)
+        self.widget_2 = QWidget(self.scrollAreaWidgetContents)
+        self.widget_2.setObjectName(u"widget_2")
+        sizePolicy.setHeightForWidth(self.widget_2.sizePolicy().hasHeightForWidth())
+        self.widget_2.setSizePolicy(sizePolicy)
+        self.widget_2.setStyleSheet(u"background-color: transparent;\n"
+"border:2px transparent;\n"
+"border-radius:7px;\n"
+"")
+        self.horizontalLayout_18 = QHBoxLayout(self.widget_2)
+        self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
+        self.horizontalLayout_18.setContentsMargins(-1, 0, -1, -1)
+        self.label_68 = QLabel(self.widget_2)
         self.label_68.setObjectName(u"label_68")
         sizePolicy.setHeightForWidth(self.label_68.sizePolicy().hasHeightForWidth())
         self.label_68.setSizePolicy(sizePolicy)
         self.label_68.setStyleSheet(u"color: black;\n"
 "font-weight: bold;\n"
-"font-size: 35px;\n"
-"border: 2px solid black;\n"
-"border-radius: 7px;\n"
-"qproperty-alignment: 'AlignCenter';\n"
-"background-color: rgb(208, 233, 244);\n"
+"font-size: 25px;\n"
+"border: none;\n"
+"background-color: transparent;\n"
 "")
+        self.label_68.setTextFormat(Qt.TextFormat.AutoText)
+        self.label_68.setScaledContents(True)
         self.label_68.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label_68.setWordWrap(True)
 
-        self.verticalLayout_36.addWidget(self.label_68)
+        self.horizontalLayout_18.addWidget(self.label_68)
+
+
+        self.horizontalLayout_9.addWidget(self.widget_2)
+
+        self.scrollArea_2.setWidget(self.scrollAreaWidgetContents)
+
+        self.verticalLayout_36.addWidget(self.scrollArea_2)
 
         self.another_search = QPushButton(self.user_search_result)
         self.another_search.setObjectName(u"another_search")
@@ -1255,7 +1332,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_36.addWidget(self.another_search)
 
-        self.verticalLayout_36.setStretch(0, 5)
+        self.verticalLayout_36.setStretch(0, 4)
         self.verticalLayout_36.setStretch(1, 1)
 
         self.verticalLayout_37.addLayout(self.verticalLayout_36)
@@ -2658,7 +2735,7 @@ class Ui_MainWindow(object):
 
         self.stackedWidget.addWidget(self.stats)
 
-        self.horizontalLayout_9.addWidget(self.stackedWidget)
+        self.verticalLayout_22.addWidget(self.stackedWidget)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
